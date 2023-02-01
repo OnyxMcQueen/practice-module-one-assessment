@@ -94,7 +94,7 @@ describe("removeProperty", () => {
     const obj = { name: "John Doe", age: 30 };
     const propertyName = "age";
     const result = removeProperty(obj, propertyName);
-    expect(result).toBe({ name: "John Doe" });
+    expect(result).toStrictEqual({ name: "John Doe" });
     expect(obj).not.toHaveProperty(propertyName);
   });
 
