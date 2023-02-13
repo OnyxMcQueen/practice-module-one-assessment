@@ -62,7 +62,7 @@ describe("getLargestKeyValuePair", () => {
 
   test("Return the key-value pair with the largest value in an object with negative values", () => {
     expect(getLargestKeyValuePair({ a: -2, b: -3, c: -5, d: -1 })).toEqual({
-      a: -2,
+      d: -1,
     });
   });
 
@@ -94,7 +94,7 @@ describe("convertToUppercase", () => {
     expect(convertToUppercase(["h3ll0", "w0rld", 12345])).toEqual([
       "H3LL0",
       "W0RLD",
-      12345,
+      "12345",
     ]);
   });
 });
@@ -111,8 +111,8 @@ describe("isOddOrEven", () => {
   });
 
   test("Return error for non-integer inputs", () => {
-    expect(() => isOddOrEven(1.5)).toThrowError("Input must be an integer");
-    expect(() => isOddOrEven("a")).toThrowError("Input must be an integer");
+    expect(() => isOddOrEven(1.5)).toEqual("Input must be an integer");
+    expect(() => isOddOrEven("a")).toEqual("Input must be an integer");
   });
 });
 
@@ -127,8 +127,8 @@ describe("reverseString", () => {
   });
 
   test("Return error for non-string inputs", () => {
-    expect(() => reverseString(123)).toThrowError("Input must be a string");
-    expect(() => reverseString([1, 2, 3])).toThrowError(
+    expect(() => reverseString(123)).toEqual("Input must be a string");
+    expect(() => reverseString([1, 2, 3])).toEqual(
       "Input must be a string"
     );
   });
@@ -152,7 +152,7 @@ describe("calculateAverage", () => {
 
 describe("switchFirstAndLastLetter", () => {
   it("should return a new string with the first and last letter of the original string switched", () => {
-    expect(switchFirstAndLastLetter("hello")).toEqual("ollhe");
+    expect(switchFirstAndLastLetter("hello")).toEqual("oellh");
   });
 
   it("should return an error message if the input is not a string", () => {

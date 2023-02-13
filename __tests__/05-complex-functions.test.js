@@ -7,9 +7,10 @@ const {
   getAnimalDescription,
 } = require("../src/05-complex-functions");
 
-const { people } = require("../data/people");
-const { animals } = require("../data/animals");
-const { books } = require("../data/books");
+const { people } = require("../data/people.js");
+const { animals } = require("../data/animals.js");
+const { books } = require("../data/books.js");
+
 
 describe("printPersonData", () => {
   test("returns 'No data provided' when data is not an array", () => {
